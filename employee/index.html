@@ -1,20 +1,158 @@
 <!doctype html>
+
 <html lang="en">
 
 <head>
 
-  <meta charset="UTF-8">
+  <link
+    rel="icon"
+    type="image/x-icon"
+    href="../favicon.ico"
+  />
+
+  <meta charset="UTF-8" />
 
   <meta
     name="viewport"
     content="width=device-width, initial-scale=1.0"
-  >
+  />
 
   <title>
     Employee Portal | World Wide Broach
   </title>
 
-  <link rel="stylesheet" href="../styles.css">
+  <meta
+    name="description"
+    content="Internal employee portal for World Wide Broach personnel."
+  />
+
+  <link rel="stylesheet" href="../styles.css" />
+
+  <style>
+
+    .portal-grid {
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(auto-fit, minmax(260px, 1fr));
+
+      gap: 24px;
+
+      margin-top: 50px;
+    }
+
+    .portal-card {
+
+      background: #111111;
+
+      border: 1px solid #2a2a2a;
+
+      border-radius: 18px;
+
+      padding: 32px;
+
+      transition: 0.2s ease;
+    }
+
+    .portal-card:hover {
+
+      transform: translateY(-4px);
+
+      border-color: #5d5d5d;
+    }
+
+    .portal-card-title {
+
+      font-size: 24px;
+
+      font-weight: 700;
+
+      margin-bottom: 14px;
+
+      color: white;
+    }
+
+    .portal-card-text {
+
+      color: #bdbdbd;
+
+      line-height: 1.7;
+
+      margin-bottom: 28px;
+    }
+
+    .portal-btn {
+
+      display: inline-block;
+
+      padding: 12px 22px;
+
+      border-radius: 10px;
+
+      background: white;
+
+      color: black;
+
+      text-decoration: none;
+
+      font-weight: 700;
+
+      transition: 0.2s ease;
+    }
+
+    .portal-btn:hover {
+
+      opacity: 0.9;
+    }
+
+    .logout-section {
+
+      margin-top: 70px;
+
+      display: flex;
+
+      justify-content: center;
+    }
+
+    .logout-btn {
+
+      padding: 14px 28px;
+
+      border-radius: 12px;
+
+      background: #1f1f1f;
+
+      border: 1px solid #3a3a3a;
+
+      color: white;
+
+      text-decoration: none;
+
+      font-weight: 700;
+
+      transition: 0.2s ease;
+    }
+
+    .logout-btn:hover {
+
+      background: #2c2c2c;
+    }
+
+    .employee-note {
+
+      margin-top: 20px;
+
+      color: #9d9d9d;
+
+      font-size: 15px;
+
+      line-height: 1.7;
+
+      max-width: 750px;
+    }
+
+  </style>
 
 </head>
 
@@ -22,7 +160,7 @@
 
   <header class="header">
 
-    <a href="../index.html">
+    <a href="../index.html" class="logo-link">
 
       <img
         src="../logo.png"
@@ -34,12 +172,16 @@
 
     <nav class="nav">
 
-      <a href="#">
-        Dashboard
+      <a class="active-nav" href="#">
+        Employee Portal
       </a>
 
       <a href="#">
-        Files
+        Documents
+      </a>
+
+      <a href="#">
+        Production
       </a>
 
       <a href="#">
@@ -48,29 +190,159 @@
 
     </nav>
 
+    <a href="../index.html#contact" class="usa-badge">
+
+      <img
+        src="../flag.png"
+        alt="American Flag"
+        class="usa-flag"
+      >
+
+      <span>
+        MADE IN USA
+      </span>
+
+    </a>
+
   </header>
 
-  <section class="hero">
+  <main class="main subpage-main">
 
-    <div class="hero-content">
+    <section class="section">
 
-      <h1>
+      <div class="kicker">
+        INTERNAL ACCESS
+      </div>
+
+      <h1 class="headline">
         Employee Portal
       </h1>
 
-      <p>
-        Authorized employees only.
+      <p class="subhead">
+
+        Internal access hub for World Wide Broach
+        employees, manufacturing resources,
+        production tools, and company information.
+
       </p>
+
+      <div class="employee-note">
+
+        Authorized personnel only. Access to internal
+        production data, scheduling systems, customer
+        files, and operational resources is restricted
+        to approved World Wide Broach employees.
+
+      </div>
+
+      <div class="portal-grid">
+
+        <div class="portal-card">
+
+          <div class="portal-card-title">
+            Documents
+          </div>
+
+          <div class="portal-card-text">
+
+            Access production drawings, work
+            instructions, tooling information,
+            and internal company files.
+
+          </div>
+
+          <a href="#" class="portal-btn">
+            OPEN
+          </a>
+
+        </div>
+
+        <div class="portal-card">
+
+          <div class="portal-card-title">
+            Production Schedule
+          </div>
+
+          <div class="portal-card-text">
+
+            Review current job scheduling,
+            machine status, deadlines,
+            and production timelines.
+
+          </div>
+
+          <a href="#" class="portal-btn">
+            VIEW
+          </a>
+
+        </div>
+
+        <div class="portal-card">
+
+          <div class="portal-card-title">
+            Employee Resources
+          </div>
+
+          <div class="portal-card-text">
+
+            Company updates, internal tools,
+            training resources, and operational
+            information for employees.
+
+          </div>
+
+          <a href="#" class="portal-btn">
+            ACCESS
+          </a>
+
+        </div>
+
+      </div>
+
+      <div class="logout-section">
+
+        <a
+          href="https://www.worldwidebroach.com/cdn-cgi/access/logout?returnTo=https://www.worldwidebroach.com/employee"
+          class="logout-btn"
+        >
+          Logout
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer class="footer">
+
+    <div class="footer-inner">
+
+      <div class="footer-brand">
+
+        <img
+          src="../logo.png"
+          alt="World Wide Broach Logo"
+          class="footer-logo"
+        />
+
+        <div>
+          © <span id="year"></span> World Wide Broach
+        </div>
+
+      </div>
 
     </div>
 
-  </section>
-  <a
-  href="https://www.worldwidebroach.com/cdn-cgi/access/logout?returnTo=https://www.worldwidebroach.com/employee"
-  class="logout-btn"
->
-  Logout
-</a>
+  </footer>
+
+  <script>
+
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+  </script>
 
 </body>
+
 </html>
