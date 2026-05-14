@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thanks — World Wide Broach</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="brand">
+        <div class="mark"></div>
+        <div class="name">WORLD WIDE BROACH</div>
+      </div>
+      <div class="pill">SUBMITTED</div>
+    </header>
+
+    <main class="main">
+      <section class="section">
+        <div class="kicker">THANK YOU</div>
+        <h1 class="section-title">We received your request.</h1>
+        <p class="subhead">
+          We’ll review your details and respond shortly.
+        </p>
+
+        <div style="margin-top: 24px;">
+          <a class="btn btn-primary" href="/">BACK TO HOME</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <div>© <span id="year"></span> World Wide Broach</div>
+        <div class="footer-links">
+          <a href="/">HOME</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

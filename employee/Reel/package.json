@@ -1,0 +1,27 @@
+{
+  "name": "redditreels",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+
+  "scripts": {
+    "start": "electron ."
+  },
+
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/henrypiper/RedditReels.git"
+  },
+
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+
+  "type": "commonjs",
+
+  "bugs": {
+    "url": "https://github.com/henrypiper/RedditReels/issues"
+  },
+
+  "homepage": "https://github.com/henrypiper/RedditReels#readme"
+}
