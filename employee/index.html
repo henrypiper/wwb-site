@@ -4,12 +4,6 @@
 
 <head>
 
-  <link
-    rel="icon"
-    type="image/x-icon"
-    href="../../favicon.ico"
-  />
-
   <meta charset="UTF-8" />
 
   <meta
@@ -18,77 +12,100 @@
   />
 
   <title>
-    Employee Portal | World Wide Broach
+    Production Schedule | World Wide Broach
   </title>
 
   <meta
     name="description"
-    content="Internal employee portal for World Wide Broach personnel."
+    content="Production scheduling and manufacturing calendar for World Wide Broach employees."
   />
 
-  <link rel="stylesheet" href="../../styles.css" />
+  <!-- ABSOLUTE PATHS -->
+  <link
+    rel="icon"
+    type="image/x-icon"
+    href="/favicon.ico"
+  />
+
+  <link
+    rel="stylesheet"
+    href="/styles.css"
+  />
 
   <style>
 
-    .portal-grid {
+    .calendar-page {
 
-      display: grid;
-
-      grid-template-columns:
-        repeat(auto-fit, minmax(260px, 1fr));
-
-      gap: 24px;
-
-      margin-top: 50px;
+      padding-top: 40px;
     }
 
-    .portal-card {
+    .calendar-container {
+
+      margin-top: 50px;
 
       background: #111111;
 
       border: 1px solid #2a2a2a;
 
-      border-radius: 18px;
+      border-radius: 24px;
 
-      padding: 32px;
+      overflow: hidden;
 
-      transition: 0.2s ease;
+      box-shadow:
+        0 0 40px rgba(0, 0, 0, 0.35);
     }
 
-    .portal-card:hover {
+    .calendar-topbar {
 
-      transform: translateY(-4px);
+      display: flex;
 
-      border-color: #5d5d5d;
+      justify-content: space-between;
+
+      align-items: center;
+
+      padding: 24px 30px;
+
+      border-bottom: 1px solid #2a2a2a;
+
+      background: #151515;
     }
 
-    .portal-card-title {
-
-      font-size: 24px;
-
-      font-weight: 700;
-
-      margin-bottom: 14px;
+    .calendar-title {
 
       color: white;
+
+      font-size: 28px;
+
+      font-weight: 700;
     }
 
-    .portal-card-text {
+    .calendar-subtitle {
 
-      color: #bdbdbd;
+      color: #9d9d9d;
 
-      line-height: 1.7;
+      margin-top: 6px;
 
-      margin-bottom: 28px;
+      font-size: 15px;
     }
 
-    .portal-btn {
+    .calendar-actions {
 
-      display: inline-block;
+      display: flex;
+
+      gap: 14px;
+    }
+
+    .calendar-btn {
+
+      display: inline-flex;
+
+      align-items: center;
+
+      justify-content: center;
 
       padding: 12px 22px;
 
-      border-radius: 10px;
+      border-radius: 12px;
 
       background: white;
 
@@ -101,55 +118,57 @@
       transition: 0.2s ease;
     }
 
-    .portal-btn:hover {
+    .calendar-btn:hover {
 
       opacity: 0.9;
+
+      transform: translateY(-2px);
     }
 
-    .logout-section {
+    .calendar-wrapper {
 
-      margin-top: 70px;
-
-      display: flex;
-
-      justify-content: center;
+      width: 100%;
     }
 
-    .logout-btn {
+    .calendar-wrapper iframe {
 
-      padding: 14px 28px;
+      width: 100%;
 
-      border-radius: 12px;
+      height: 850px;
 
-      background: #1f1f1f;
+      border: none;
 
-      border: 1px solid #3a3a3a;
+      display: block;
 
-      color: white;
-
-      text-decoration: none;
-
-      font-weight: 700;
-
-      transition: 0.2s ease;
+      background: white;
     }
 
-    .logout-btn:hover {
+    @media (max-width: 900px) {
 
-      background: #2c2c2c;
-    }
+      .calendar-topbar {
 
-    .employee-note {
+        flex-direction: column;
 
-      margin-top: 20px;
+        align-items: flex-start;
 
-      color: #9d9d9d;
+        gap: 20px;
+      }
 
-      font-size: 15px;
+      .calendar-actions {
 
-      line-height: 1.7;
+        width: 100%;
+      }
 
-      max-width: 750px;
+      .calendar-btn {
+
+        width: 100%;
+      }
+
+      .calendar-wrapper iframe {
+
+        height: 700px;
+      }
+
     }
 
   </style>
@@ -160,10 +179,13 @@
 
   <header class="header">
 
-    <a href="/" class="logo-link">
+    <a
+      href="/"
+      class="logo-link"
+    >
 
       <img
-        src="../../logo.png"
+        src="/logo.png"
         alt="World Wide Broach"
         class="logo"
       >
@@ -172,22 +194,26 @@
 
     <nav class="nav">
 
-  <a href="/employee/">
-  Employee Portal
-</a>
+      <a href="/employee/">
+        Employee Portal
+      </a>
 
-  <a href="/employee/calendar/">
-    Production Schedule
-  </a>
+      <a
+        class="active-nav"
+        href="/employee/calendar/"
+      >
+        Production Schedule
+      </a>
 
-</nav>
+    </nav>
 
-
-
-    <a href="/#contact" class="usa-badge">
+    <a
+      href="/#contact"
+      class="usa-badge"
+    >
 
       <img
-        src="../flag.png"
+        src="/flag.png"
         alt="American Flag"
         class="usa-flag"
       >
@@ -200,125 +226,68 @@
 
   </header>
 
-  <main class="main subpage-main">
+  <main class="main subpage-main calendar-page">
 
     <section class="section">
 
       <div class="kicker">
-        INTERNAL ACCESS
+        OPERATIONS
       </div>
 
       <h1 class="headline">
-        Employee Portal
+        Production Schedule
       </h1>
 
       <p class="subhead">
 
-        Internal access hub for World Wide Broach
-        employees, manufacturing resources,
-        production tools, and company information.
+        Internal production scheduling calendar
+        for manufacturing timelines, machine
+        scheduling, delivery deadlines,
+        and operational planning.
 
       </p>
 
-      <div class="employee-note">
+      <div class="calendar-container">
 
-        Authorized personnel only. Access to internal
-        production data, scheduling systems, customer
-        files, and operational resources is restricted
-        to approved World Wide Broach employees.
+        <div class="calendar-topbar">
 
-      </div>
+          <div>
 
-      <div class="portal-grid">
+            <div class="calendar-title">
+              WWB Manufacturing Calendar
+            </div>
 
-  <!-- CUSTOMER DOCUMENTS -->
+            <div class="calendar-subtitle">
 
-  <div class="portal-card">
+              Live scheduling system for
+              production operations.
 
-    <div class="portal-card-title">
-      Customer Documents
-    </div>
+            </div>
 
-    <div class="portal-card-text">
+          </div>
 
-      Access customer documents,
-      customer history, drawings,
-      and orders.
+          <div class="calendar-actions">
 
-    </div>
+            <a
+              href="/employee/"
+              class="calendar-btn"
+            >
+              Back to Portal
+            </a>
 
-    <a
-      href="https://drive.google.com/drive/folders/1EFNOGP45mu6iGm-Ir1dT_bmQ-elcEsvt?usp=sharing"
-      target="_blank"
-      class="portal-btn"
-    >
-      OPEN
-    </a>
+          </div>
 
-  </div>
+        </div>
 
-  <!-- PRODUCTION -->
+        <div class="calendar-wrapper">
 
-  <div class="portal-card">
+          <iframe
+            src="https://calendar.google.com/calendar/embed?src=660b0cbb4e3715c54b9108a3920406ad8916ac4dd9aabeb2eb7b937159896d47%40group.calendar.google.com&ctz=America%2FChicago"
+            frameborder="0"
+            scrolling="no">
+          </iframe>
 
-    <div class="portal-card-title">
-      Production Schedule
-    </div>
-
-    <div class="portal-card-text">
-
-      Review current job scheduling,
-      machine status, deadlines,
-      and production timelines.
-
-    </div>
-
-    <a
-      href="/employee/calendar/"
-      class="portal-btn"
-    >
-      VIEW
-    </a>
-
-  </div>
-
-  <!-- HUMAN RESOURCES -->
-
-  <div class="portal-card">
-
-    <div class="portal-card-title">
-      Human Resources
-    </div>
-
-    <div class="portal-card-text">
-
-      Employee information,
-      retention policies,
-      pay scales,
-      and company history.
-
-    </div>
-
-    <a
-      href="https://drive.google.com/drive/folders/1bCg29hmb4S3MImjym2X-D2AEZUNhz1nP?usp=sharing"
-      target="_blank"
-      class="portal-btn"
-    >
-      OPEN
-    </a>
-
-  </div>
-
-</div>
-
-      <div class="logout-section">
-
-        <a
-          href="https://www.worldwidebroach.com/cdn-cgi/access/logout?returnTo=https://www.worldwidebroach.com/employee"
-          class="logout-btn"
-        >
-          Logout
-        </a>
+        </div>
 
       </div>
 
@@ -333,7 +302,7 @@
       <div class="footer-brand">
 
         <img
-          src="../../logo.png"
+          src="/logo.png"
           alt="World Wide Broach Logo"
           class="footer-logo"
         />
