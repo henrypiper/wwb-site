@@ -4,12 +4,6 @@
 
 <head>
 
-  <link
-    rel="icon"
-    type="image/x-icon"
-    href="../favicon.ico"
-  />
-
   <meta charset="UTF-8" />
 
   <meta
@@ -26,7 +20,17 @@
     content="Internal employee portal for World Wide Broach personnel."
   />
 
-  <link rel="stylesheet" href="../styles.css" />
+  <!-- ABSOLUTE PATHS -->
+  <link
+    rel="icon"
+    type="image/x-icon"
+    href="/favicon.ico"
+  />
+
+  <link
+    rel="stylesheet"
+    href="/styles.css"
+  />
 
   <style>
 
@@ -104,6 +108,8 @@
     .portal-btn:hover {
 
       opacity: 0.9;
+
+      transform: translateY(-2px);
     }
 
     .logout-section {
@@ -160,10 +166,13 @@
 
   <header class="header">
 
-    <a href="../index.html" class="logo-link">
+    <a
+      href="/"
+      class="logo-link"
+    >
 
       <img
-        src="../logo.png"
+        src="/logo.png"
         alt="World Wide Broach"
         class="logo"
       >
@@ -172,22 +181,26 @@
 
     <nav class="nav">
 
-  <a href="index.html">
-    Employee Portal
-  </a>
+      <a
+        class="active-nav"
+        href="/employee/"
+      >
+        Employee Portal
+      </a>
 
-  <a href="calendar/">
-    Production Schedule
-  </a>
+      <a href="/employee/calendar/">
+        Production Schedule
+      </a>
 
-</nav>
+    </nav>
 
-
-
-    <a href="../index.html#contact" class="usa-badge">
+    <a
+      href="/#contact"
+      class="usa-badge"
+    >
 
       <img
-        src="../flag.png"
+        src="/flag.png"
         alt="American Flag"
         class="usa-flag"
       >
@@ -231,85 +244,85 @@
 
       <div class="portal-grid">
 
-  <!-- CUSTOMER DOCUMENTS -->
+        <!-- CUSTOMER DOCUMENTS -->
 
-  <div class="portal-card">
+        <div class="portal-card">
 
-    <div class="portal-card-title">
-      Customer Documents
-    </div>
+          <div class="portal-card-title">
+            Customer Documents
+          </div>
 
-    <div class="portal-card-text">
+          <div class="portal-card-text">
 
-      Access customer documents,
-      customer history, drawings,
-      and orders.
+            Access customer documents,
+            customer history, drawings,
+            and orders.
 
-    </div>
+          </div>
 
-    <a
-      href="https://drive.google.com/drive/folders/1EFNOGP45mu6iGm-Ir1dT_bmQ-elcEsvt?usp=sharing"
-      target="_blank"
-      class="portal-btn"
-    >
-      OPEN
-    </a>
+          <a
+            href="https://drive.google.com/drive/folders/1EFNOGP45mu6iGm-Ir1dT_bmQ-elcEsvt?usp=sharing"
+            target="_blank"
+            class="portal-btn"
+          >
+            OPEN
+          </a>
 
-  </div>
+        </div>
 
-  <!-- PRODUCTION -->
+        <!-- PRODUCTION -->
 
-  <div class="portal-card">
+        <div class="portal-card">
 
-    <div class="portal-card-title">
-      Production Schedule
-    </div>
+          <div class="portal-card-title">
+            Production Schedule
+          </div>
 
-    <div class="portal-card-text">
+          <div class="portal-card-text">
 
-      Review current job scheduling,
-      machine status, deadlines,
-      and production timelines.
+            Review current job scheduling,
+            machine status, deadlines,
+            and production timelines.
 
-    </div>
+          </div>
 
-    <a
-      href="calendar.html"
-      class="portal-btn"
-    >
-      VIEW
-    </a>
+          <a
+            href="/employee/calendar/"
+            class="portal-btn"
+          >
+            VIEW
+          </a>
 
-  </div>
+        </div>
 
-  <!-- HUMAN RESOURCES -->
+        <!-- HUMAN RESOURCES -->
 
-  <div class="portal-card">
+        <div class="portal-card">
 
-    <div class="portal-card-title">
-      Human Resources
-    </div>
+          <div class="portal-card-title">
+            Human Resources
+          </div>
 
-    <div class="portal-card-text">
+          <div class="portal-card-text">
 
-      Employee information,
-      retention policies,
-      pay scales,
-      and company history.
+            Employee information,
+            retention policies,
+            pay scales,
+            and company history.
 
-    </div>
+          </div>
 
-    <a
-      href="https://drive.google.com/drive/folders/1bCg29hmb4S3MImjym2X-D2AEZUNhz1nP?usp=sharing"
-      target="_blank"
-      class="portal-btn"
-    >
-      OPEN
-    </a>
+          <a
+            href="https://drive.google.com/drive/folders/1bCg29hmb4S3MImjym2X-D2AEZUNhz1nP?usp=sharing"
+            target="_blank"
+            class="portal-btn"
+          >
+            OPEN
+          </a>
 
-  </div>
+        </div>
 
-</div>
+      </div>
 
       <div class="logout-section">
 
@@ -333,7 +346,7 @@
       <div class="footer-brand">
 
         <img
-          src="../logo.png"
+          src="/logo.png"
           alt="World Wide Broach Logo"
           class="footer-logo"
         />
