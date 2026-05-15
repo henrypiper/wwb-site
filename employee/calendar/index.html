@@ -4,12 +4,6 @@
 
 <head>
 
-  <link
-    rel="icon"
-    type="image/x-icon"
-    href="../favicon.ico"
-  />
-
   <meta charset="UTF-8" />
 
   <meta
@@ -26,7 +20,17 @@
     content="Production scheduling and manufacturing calendar for World Wide Broach employees."
   />
 
-  <link rel="stylesheet" href="../styles.css" />
+  <!-- ABSOLUTE PATHS -->
+  <link
+    rel="icon"
+    type="image/x-icon"
+    href="/favicon.ico"
+  />
+
+  <link
+    rel="stylesheet"
+    href="/styles.css"
+  />
 
   <style>
 
@@ -175,10 +179,13 @@
 
   <header class="header">
 
-    <a href="../index.html" class="logo-link">
+    <a
+      href="/"
+      class="logo-link"
+    >
 
       <img
-        src="../logo.png"
+        src="/logo.png"
         alt="World Wide Broach"
         class="logo"
       >
@@ -187,20 +194,26 @@
 
     <nav class="nav">
 
-      <a href="index.html">
+      <a href="/employee/">
         Employee Portal
       </a>
 
-      <a class="active-nav" href="#">
+      <a
+        class="active-nav"
+        href="/employee/calendar/"
+      >
         Production Schedule
       </a>
 
     </nav>
 
-    <a href="../index.html#contact" class="usa-badge">
+    <a
+      href="/#contact"
+      class="usa-badge"
+    >
 
       <img
-        src="../flag.png"
+        src="/flag.png"
         alt="American Flag"
         class="usa-flag"
       >
@@ -256,7 +269,7 @@
           <div class="calendar-actions">
 
             <a
-              href="index.html"
+              href="/employee/"
               class="calendar-btn"
             >
               Back to Portal
@@ -289,7 +302,7 @@
       <div class="footer-brand">
 
         <img
-          src="../logo.png"
+          src="/logo.png"
           alt="World Wide Broach Logo"
           class="footer-logo"
         />
