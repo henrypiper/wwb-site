@@ -4,7 +4,11 @@
 
 <head>
 
-  <link rel="icon" type="image/x-icon" href="../favicon.ico" />
+  <link
+    rel="icon"
+    type="image/x-icon"
+    href="../favicon.ico"
+  />
 
   <meta charset="UTF-8" />
 
@@ -19,10 +23,87 @@
 
   <meta
     name="description"
-    content="Precision broaching services for firearm components, barrel extensions, suppressor mounts, splines, and high-tolerance internal features."
+    content="Precision broaching services for firearm components, barrel attachments, suppressor mounts, splines, and high-tolerance internal features."
   />
 
   <link rel="stylesheet" href="../styles.css" />
+
+  <style>
+
+    .cad-showcase {
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      gap: 70px;
+
+      margin-top: 60px;
+
+      flex-wrap: wrap;
+    }
+
+    .cad-text {
+
+      flex: 1;
+
+      min-width: 320px;
+    }
+
+    .cad-viewer {
+
+      flex: 1;
+
+      min-width: 320px;
+    }
+
+    .cad-viewer iframe {
+
+      width: 100%;
+
+      height: 650px;
+
+      border: 1px solid #2a2a2a;
+
+      border-radius: 28px;
+
+      background: #111111;
+
+      box-shadow:
+        0 0 50px rgba(0, 0, 0, 0.4);
+    }
+
+    .cad-note {
+
+  margin-top: 32px;
+
+  padding: 28px 32px;
+
+  background: #f3f3f3;
+
+  border: 1px solid #444;
+
+  border-radius: 22px;
+}
+
+    @media (max-width: 950px) {
+
+      .cad-showcase {
+
+        flex-direction: column;
+
+        gap: 40px;
+      }
+
+      .cad-viewer iframe {
+
+        height: 450px;
+      }
+    }
+
+  </style>
 
 </head>
 
@@ -74,7 +155,10 @@
 
         <button class="dropdown-btn">
           Capabilities
-          <img src="../images/dropdown-arrow.svg" class="dropdown-arrow">
+          <img
+            src="../images/dropdown-arrow.svg"
+            class="dropdown-arrow"
+          >
         </button>
 
         <div class="dropdown-content">
@@ -95,7 +179,10 @@
 
         <button class="dropdown-btn">
           Resources
-          <img src="../images/dropdown-arrow.svg" class="dropdown-arrow">
+          <img
+            src="../images/dropdown-arrow.svg"
+            class="dropdown-arrow"
+          >
         </button>
 
         <div class="dropdown-content">
@@ -109,19 +196,31 @@
       </div>
 
       <a href="../about.html">
-  About
-</a>
+        About
+      </a>
 
-<a href="../index.html#contact">
-  Contact
-</a>
+      <a href="../index.html#contact">
+        Contact
+      </a>
 
     </nav>
 
-<a href="../index.html#contact" class="usa-badge">
-  <img src="../flag.png" alt="American Flag" class="usa-flag">
-  <span>MADE IN USA</span>
-</a>
+    <a
+      href="../index.html#contact"
+      class="usa-badge"
+    >
+
+      <img
+        src="../flag.png"
+        alt="American Flag"
+        class="usa-flag"
+      >
+
+      <span>
+        MADE IN USA
+      </span>
+
+    </a>
 
   </header>
 
@@ -129,21 +228,83 @@
 
     <section class="section">
 
-      <div class="kicker">
-        FIREARMS
+      <div class="cad-showcase">
+
+        <div class="cad-text">
+
+          <div class="kicker">
+            FIREARMS
+          </div>
+
+          <h1 class="headline">
+
+            PRECISION FIREARM COMPONENT BROACHING
+
+          </h1>
+
+          <p class="subhead">
+
+            World Wide Broach provides precision broaching
+            solutions for firearm manufacturers producing
+            barrel attachments, suppressor mounts,
+            splines, locking geometries,
+            and custom internal profiles.
+
+          </p>
+
+          <div class="cad-note">
+
+  <div class="cad-note-title">
+    Interactive Barrel Attachment Model
+  </div>
+
+  <ul class="cad-list">
+
+    <li>
+      Precision-machined barrel attachment component
+    </li>
+
+    <li>
+      Internal spline geometry shown within the model
+    </li>
+
+    <li>
+      Additional operations such as coining can also be performed
+    </li>
+
+    <li>
+      Rotate, zoom, and inspect the model directly in the browser
+    </li>
+
+  </ul>
+
+</div>
+
+        </div>
+
+        <div class="cad-viewer">
+
+          <div class="sketchfab-embed-wrapper">
+
+            <iframe
+              title="gunBarrel"
+              frameborder="0"
+              allowfullscreen
+              mozallowfullscreen="true"
+              webkitallowfullscreen="true"
+              allow="autoplay; fullscreen; xr-spatial-tracking"
+              xr-spatial-tracking
+              execution-while-out-of-viewport
+              execution-while-not-rendered
+              web-share
+              src="https://sketchfab.com/models/46a9a399a44d4cb0a79d3597fb3e71e5/embed">
+            </iframe>
+
+          </div>
+
+        </div>
+
       </div>
-
-      <h1 class="headline">
-        Firearm Component Broaching Services
-      </h1>
-
-      <p class="subhead">
-
-        Precision broaching solutions for firearm manufacturers producing
-        barrel extensions, suppressor mounts, locking components,
-        internal splines, and high-tolerance internal geometries.
-
-      </p>
 
     </section>
 
@@ -154,13 +315,14 @@
         <div class="card big">
 
           <div class="card-title">
-            BARREL EXTENSIONS
+            BARREL ATTACHMENTS
           </div>
 
           <div class="card-text">
 
-            Precision broaching for barrel extension features,
-            locking geometries, and internal firearm profiles.
+            Precision broaching for barrel attachment
+            interfaces, alignment geometries,
+            and critical internal firearm features.
 
           </div>
 
@@ -169,14 +331,14 @@
         <div class="card big">
 
           <div class="card-title">
-            INTERNAL FEATURES
+            INTERNAL SPLINES
           </div>
 
           <div class="card-text">
 
-            High-accuracy broaching for splines,
-            keyways, indexing features,
-            and precision internal geometries.
+            High-accuracy broaching solutions for
+            splines, indexing features,
+            and precision firearm components.
 
           </div>
 
@@ -192,7 +354,7 @@
 
             Experience machining hardened steels
             and high-strength alloys used
-            in firearm manufacturing applications.
+            throughout the firearms industry.
 
           </div>
 
@@ -209,15 +371,14 @@
       </div>
 
       <h2 class="section-title">
-        Precision Firearm Manufacturing Support
+        High-Tolerance Manufacturing Support
       </h2>
 
       <p class="subhead">
 
-        World Wide Broach supports firearm manufacturers
-        with precision broaching services for barrel extensions,
-        suppressor components, bolt assemblies,
-        splines, and custom internal profiles.
+        Our broaching capabilities support both
+        prototype and production firearm manufacturing
+        with repeatable precision and dependable turnaround.
 
       </p>
 
@@ -235,8 +396,8 @@
 
           <div class="card-text">
 
-            Broaching solutions for suppressor mounts,
-            adapters, and precision alignment features.
+            Broaching support for suppressor mounts,
+            adapters, and alignment-critical geometries.
 
           </div>
 
@@ -250,9 +411,9 @@
 
           <div class="card-text">
 
-            Custom broach tooling designed for
-            firearm-specific production requirements
-            and repeatable manufacturing performance.
+            Custom broach tooling designed
+            specifically for firearm manufacturing
+            and production applications.
 
           </div>
 
@@ -267,7 +428,8 @@
           <div class="card-text">
 
             Reliable turnaround and consistent quality
-            for both prototype and production firearm components.
+            for low-volume prototypes
+            and full production runs.
 
           </div>
 
@@ -287,8 +449,8 @@
 
         <div class="callout-text">
 
-          Looking for a broaching supplier
-          for firearm components or precision internal features?
+          Looking for a precision broaching supplier
+          for firearm components or internal features?
           Contact our team to discuss your project requirements.
 
         </div>
@@ -299,7 +461,9 @@
             class="btn btn-primary"
             href="../index.html#contact"
           >
+
             CONTACT US
+
           </a>
 
         </div>
@@ -333,8 +497,10 @@
   </footer>
 
   <script>
+
     document.getElementById("year").textContent =
       new Date().getFullYear();
+
   </script>
 
 </body>
